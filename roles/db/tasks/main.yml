@@ -1,0 +1,22 @@
+- name: Start mariadb
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+
+- name: Create a new database with name 'wordpress'
+  community.mysql.mysql_db:
+    login_user: ansible
+    login_password: new_password
+    name: "{{ db_name }}"
+    state: present
+
+- name: Create database user and password with all database privileges
+  community.mysql.mysql_user:
+    login_user: ansible
+    login_password: new_password
+    name: "{{ db_user}}"
+    password: "{{ db_password }}"
+    priv: '*.*:ALL'
+    state: present
+    column_case_sensitive: false

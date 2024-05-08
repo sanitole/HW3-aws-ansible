@@ -1,0 +1,7 @@
+url: https://wordpress.org/latest.tar.gz
+tar_gz_file: /tmp/wordpress.tar.gz
+remote_tar_file: /tmp
+tar_gz_file1: /tmp/wordpress/.
+tar_file: /var/www/html
+
+
