@@ -1,9 +1,5 @@
-- name: Restart Apache
-  service:
-    name: "{{ package }}"
-    state: restarted
- 
 # - name: Include vars of main.yml into the 'httpd' variable
 #   ansible.builtin.include_vars:
 #     file: main.yml
-#     name: httpd
+#     name: "{{ package }}"
+#     state: restarted

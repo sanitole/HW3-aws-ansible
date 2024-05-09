@@ -22,3 +22,8 @@
 #   ansible.builtin.template:
 #     src: "{{ templ_php_from }}"
 #     dest: "{{ templ_php_to }}"
+
+- name: Restart Apache
+  service:
+    name: "{{ apache }}"
+    state: restarted
