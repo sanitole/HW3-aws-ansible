@@ -18,12 +18,7 @@
     mode: '0755'
     remote_src: yes
 
-- name: Restart Apache
-  service:
-    name: "{{ package }}"
-    state: restarted
- 
-# - name: Include vars of main.yml into the 'httpd' variable
-#   ansible.builtin.include_vars:
-#     file: main.yml
-#     name: httpd
+# - name: Template a file to html folder
+#   ansible.builtin.template:
+#     src: "{{ templ_php_from }}"
+#     dest: "{{ templ_php_to }}"

@@ -3,5 +3,7 @@ tar_gz_file: /tmp/wordpress.tar.gz
 remote_tar_file: /tmp
 tar_gz_file1: /tmp/wordpress/.
 tar_file: /var/www/html
+# templ_php_from: wp-config-sample.php.j2
+# templ_php_to: /var/www/html/wp-config.php
 
 
