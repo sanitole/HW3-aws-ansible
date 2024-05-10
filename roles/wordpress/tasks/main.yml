@@ -18,10 +18,10 @@
     mode: '0755'
     remote_src: yes
 
-# - name: Template a file to html folder
-#   ansible.builtin.template:
-#     src: "{{ templ_php_from }}"
-#     dest: "{{ templ_php_to }}"
+- name: Template a file to html folder
+  ansible.builtin.template:
+    src: "{{ templ_php_from }}"
+    dest: "{{ templ_php_to }}"
 
 - name: Restart Apache
   service:
